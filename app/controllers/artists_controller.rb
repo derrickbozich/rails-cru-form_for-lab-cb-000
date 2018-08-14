@@ -13,7 +13,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(params.require(:artist).permit(:name, :bio))
-    redirect_to artists_path
+    redirect_to artist_path(artist)
   end
 
   def edit
